@@ -7,19 +7,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
+    //declaration of variable
     char operation;
-
-    int flag2 = 0;
-    int Numbercount;
     int flag = 0;
     double numbersave;
     double number_one;
-    int number_three;
-
     double number_two;
     EditText txt_number;
     Button Clear_Button;
@@ -48,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //declared the button on the xml
         txt_number = (EditText) findViewById(R.id.Txtnumber);
         Clear_Button = (Button) findViewById(R.id.buttonc);
         MC_Button = (Button) findViewById(R.id.buttonmc);
@@ -94,32 +89,36 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //on click C clear button
     public void On_Click_Clear(View view) {
-        number_one=0;
-        number_two=0;
+        number_one = 0;
+        number_two = 0;
         txt_number.setText("");
 
 
     }
 
+    //on click MC button
     public void On_CLik_MC(View view) {
 
         numbersave = 0;
     }
 
+    //on click Mr button
     public void On_CLik_MR(View view) {
 
         txt_number.setText(numbersave + "");
     }
 
+    //on click M+ button
     public void On_CLik_Mplus(View view) {
 
         String contain_text = txt_number.getText().toString();
         numbersave = Double.parseDouble(contain_text);
         txt_number.setText("");
-       // Toast.makeText(this, numbersave + "", Toast.LENGTH_SHORT).show();
     }
 
+    //on click back button
     public void On_CLik_Back(View view) {
 
         if (!txt_number.getText().toString().isEmpty()) {
@@ -130,94 +129,45 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-
+    //on click equal button
     public void On_CLik_Equal(View view) {
 
-        if(!txt_number.getText().toString().isEmpty())
-        {  double res;
-            number_two =  Double.parseDouble(txt_number.getText().toString());
+        if (!txt_number.getText().toString().isEmpty()) {
+            double res;
+            number_two = Double.parseDouble(txt_number.getText().toString());
 
 
-            if(operation=='+') {
+            if (operation == '+') {
                 res = number_one + number_two;
-                number_two=res;
+                number_two = res;
                 txt_number.setText(res + "");
-            }
-            else if (operation=='-')
-            {
+            } else if (operation == '-') {
 
                 res = number_one - number_two;
-                number_two=res;
+                number_two = res;
                 txt_number.setText(res + "");
 
-            } else if (operation=='/') {
+            } else if (operation == '/') {
 
                 res = number_one / number_two;
                 number_two = res;
                 txt_number.setText(res + "");
-            } else if (operation=='*') {
+            } else if (operation == '*') {
 
                 res = number_one * number_two;
                 number_two = res;
                 txt_number.setText(res + "");
 
+            } else {
+
+                txt_number.setText("bh bh ");
             }
-                else{
-
-                txt_number.setText( "bh bh ");
-            }
-
-
 
 
         }
-
-//        if (!txt_number.getText().toString().isEmpty()) {
-//            if (flag == 1) {
-//                number_two = Double.parseDouble(txt_number.getText().toString());
-//
-//                result = 0;
-//
-//                if (number_two == 0 && operation == '/') {
-//                    txt_number.setText("Error");
-//                    number_two = 0;
-//                    number_one = 0;
-//                    Numbercount = 0;
-//                    flag = 0;
-//                    flag2 = 0;
-//                } else {
-//                    switch (operation) {
-//                        case '+':
-//                            result = Numbercount + number_two;
-//                            break;
-//
-//                        case '-':
-//                            result = Numbercount - number_two;
-//                            break;
-//
-//                        case '*':
-//                            result = Numbercount * number_two;
-//                            break;
-//
-//                        case '/':
-//                            result = Numbercount / number_two;
-//                            break;
-//
-//
-//                    }
-//
-//                    txt_number.setText(result + "");
-//                    number_two = 0;
-//                    number_one = 0;
-//                    Numbercount = 0;
-//                    flag = 0;
-//                    flag2 = 0;
-//                }
-//            }
-//
-//        }
     }
 
+    //on click N button
     public void On_CLik_N(View view) {
         if (!txt_number.getText().toString().isEmpty()) {
             double numberenter = Double.parseDouble(txt_number.getText().toString());
@@ -226,8 +176,9 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //on click div button
     public void On_CLik_Div(View view) {
-        if(!txt_number.getText().toString().isEmpty()) {
+        if (!txt_number.getText().toString().isEmpty()) {
             operation = '/';
             number_one = Double.parseDouble(txt_number.getText().toString());
             txt_number.setText("");
@@ -236,11 +187,7 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    private boolean check_exisit_result() {
-        return flag == 0;
-
-    }
-
+    //on click num7 button
     public void On_CLik_Button7(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -251,6 +198,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //on click num8 button
     public void On_CLik_Button8(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -260,6 +208,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //on click num9
     public void On_CLik_Button9(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -269,16 +218,18 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //on click multiplication
     public void On_CLik_Mul(View view) {
-        if(!txt_number.getText().toString().isEmpty()) {
-           this. operation = '*';
-            number_one =Double.parseDouble(txt_number.getText().toString());
+        if (!txt_number.getText().toString().isEmpty()) {
+            this.operation = '*';
+            number_one = Double.parseDouble(txt_number.getText().toString());
             txt_number.setText("");
 
         }
 
     }
 
+    //on click num4
     public void On_CLik_Button4(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -288,6 +239,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //on click num5
     public void On_CLik_Button5(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -298,7 +250,7 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-
+    //on click num6
     public void On_CLik_Button6(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -308,8 +260,9 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //on click minus button
     public void On_CLik_Minus(View view) {
-        if(!txt_number.getText().toString().isEmpty()) {
+        if (!txt_number.getText().toString().isEmpty()) {
             operation = '-';
             number_one = Double.parseDouble(txt_number.getText().toString());
             txt_number.setText("");
@@ -317,6 +270,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //on click num1
     public void On_CLik_Button1(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -327,6 +281,7 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    //on click num2
     public void On_CLik_Button2(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -336,6 +291,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //change flage
     private void ChangeFlag() {
         if (flag == 0) {
             txt_number.setText("");
@@ -343,6 +299,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    //on click number 3 button
     public void On_CLik_Button3(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -352,7 +309,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-
+    //on click zero button
     public void onClick_0(View view) {
         ChangeFlag();
         if (txt_number.getText().toString().isEmpty()) {
@@ -362,43 +319,14 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    public void Addbutton(View view) {
-        if(!txt_number.getText().toString().isEmpty()) {
+    public void Addbutton(View view) {//on-click add button
+        if (!txt_number.getText().toString().isEmpty()) {
 
-                operation = '+';
-                number_one = Double.parseDouble(txt_number.getText().toString());
-                txt_number.setText("");
-
-//                operation = '+';
-//                number_one = number_three;
-//                txt_number.setText("");
+            operation = '+';
+            number_one = Double.parseDouble(txt_number.getText().toString());
+            txt_number.setText("");
 
         }
-//        if (!check_exisit_result() && !txt_number.getText().toString().isEmpty()) {
-//            if (flag2 == 0) {
-//                operation = '+';
-//                number_one = Double.parseDouble(txt_number.getText().toString());
-//                txt_number.setText("");
-//                Toast.makeText(this, number_one + "*", Toast.LENGTH_SHORT).show();
-//                flag2 = 1;
-//                Numbercount = number_one;
-//            } else if (flag2 == 1) {
-//                operation = '+';
-//                number_one = Double.parseDouble(txt_number.getText().toString());
-//                txt_number.setText("");
-//                // Toast.makeText(this, number_one+r+ "*", Toast.LENGTH_SHORT).show();
-//                Numbercount = number_one + Numbercount;
-//            }
-//        }
-    }
-
-    public void on_clickdot(View view) {
-        if (txt_number.getText().toString().isEmpty()) {
-            txt_number.setText("0.");
-        } else if (!txt_number.getText().toString().contains(".")) {
-            txt_number.setText(txt_number.getText() + ".");
-        }
-
 
     }
 }
