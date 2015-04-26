@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+
+    android:orientation="vertical"
+    android:weightSum=".5"
+    android:background="#000000">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+
+        >
+        <EditText
+            android:id="@+id/Txtnumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:gravity="right"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/abc_action_bar_default_height_material"
+            android:scaleType="fitCenter"
+            android:background="#000000"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".4"
+
+
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+
+            android:layout_weight=".5">
+
+
+            <Button
+                android:id="@+id/buttonc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="C"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_Click_Clear" />
+            <Button
+                android:id="@+id/buttonmc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="MC"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_MC" />
+            <Button
+                android:id="@+id/buttonmr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="MR"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_MR" />
+            <Button
+                android:id="@+id/buttonmplus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="M+"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Mplus" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight=".5">
+
+            <Button
+                android:id="@+id/buttonback"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="Back"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#313131"
+                android:layout_weight="20"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Back" />
+
+            <Button
+                android:id="@+id/buttonn"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="N"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_N" />
+            <Button
+                android:id="@+id/buttondiv"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="/"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Div" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_weight=".5">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="7"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button7" />
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="8"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button8" />
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:scaleType="fitCenter"
+                android:text="9"
+                android:gravity="center"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button9" />
+            <Button
+                android:id="@+id/buttonmul"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="*"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Mul" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_weight=".5">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="4"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button4" />
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:scaleType="fitCenter"
+                android:text="5"
+                android:gravity="center"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button5" />
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="6"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button6" />
+            <Button
+                android:id="@+id/buttonminus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="-"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Minus" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_weight=".5">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="1"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:gravity="center"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button1" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="2"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button2" />
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="3"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:background="#151615"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Button3" />
+            <Button
+                android:id="@+id/bplus"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="+"
+                android:gravity="center"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:background="#313131"
+                android:layout_weight="30"
+                android:layout_margin="5dp"
+                android:onClick="Addbutton" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_weight=".5">
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:text="0"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:background="#151615"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:onClick="onClick_0" />
+
+            <Button
+                android:id="@+id/buttoneq"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/abc_dropdownitem_icon_width"
+                android:text="="
+                android:background="#FF6600"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:onClick="On_CLik_Equal" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
